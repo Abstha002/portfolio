@@ -1,5 +1,5 @@
 import Image from "next/image";
-
+import Link from "next/link";
 export default function Home() {
   return (
     <main className="min-h-screen w-full bg-gradient-to-br from-green-300 via-blue-100 to-blue-300 flex items-center justify-center">
@@ -10,10 +10,14 @@ export default function Home() {
             <h1 className="text-3xl font-bold text-gray-800">Abhay Raj Shrestha</h1>
             <h2 className="text-xl text-gray-600 mb-4">Web Developer</h2>
             <nav className="flex gap-3">
-              <button className="px-4 py-2 rounded-lg border border-blue-500 text-blue-600 font-semibold hover:bg-blue-500 hover:text-white transition">Home</button>
-              <button className="px-4 py-2 rounded-lg border border-gray-400 text-gray-700 font-semibold hover:bg-gray-200 transition">About</button>
-              <button className="px-4 py-2 rounded-lg border border-gray-400 text-gray-700 font-semibold hover:bg-gray-200 transition">Projects</button>
-              <button className="px-4 py-2 rounded-lg border border-gray-400 text-gray-700 font-semibold hover:bg-gray-200 transition">Contact</button>
+            <Link href='/'>
+              <button className="px-4 py-2 rounded-lg border border-blue-500 text-blue-600 font-semibold hover:bg-blue-500 hover:text-white transition">Home</button></Link>
+              <Link href='/about'>
+              <button className="px-4 py-2 rounded-lg border border-gray-400 text-gray-700 font-semibold hover:bg-gray-200 transition">About</button></Link>
+              <Link href='/project'>
+              <button className="px-4 py-2 rounded-lg border border-gray-400 text-gray-700 font-semibold hover:bg-gray-200 transition">Projects</button></Link>
+              <Link href='/contact'>
+              <button className="px-4 py-2 rounded-lg border border-gray-400 text-gray-700 font-semibold hover:bg-gray-200 transition">Contact</button></Link>
             </nav>
           </div>
           {/* Image */}
