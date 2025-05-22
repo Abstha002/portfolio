@@ -10,7 +10,7 @@ export default function About() {
       <h1 className="text-3xl font-bold text-gray-800">About</h1>
       </div>
 
-      <p>I’m Abhay Raj Shrestha, a BSc.CSIT student at Himalaya College of Engineering, driven by a deep passion for building digital solutions. I specialize in front-end development using React and Next.js, and I’m also proficient in Python, with working knowledge of several languages including Java, C++, and C#.
+      <p className="text-black">I’m Abhay Raj Shrestha, a BSc.CSIT student at Himalaya College of Engineering, driven by a deep passion for building digital solutions. I specialize in front-end development using React and Next.js, and I’m also proficient in Python, with working knowledge of several languages including Java, C++, and C#.
 
 While I haven’t had formal work experience yet, I’ve independently completed a variety of projects for college that have challenged me to grow as both a coder and a thinker.
 
