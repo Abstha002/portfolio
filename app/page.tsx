@@ -23,7 +23,7 @@ export default function Home() {
           {/* Image */}
           <div className="flex justify-center">
             <Image
-              src="/profile.jpg"
+              src="https://media.licdn.com/dms/image/v2/D4D03AQGNlz6jre0lng/profile-displayphoto-shrink_200_200/B4DZbkFy82HQAg-/0/1747583447887?e=2147483647&v=beta&t=ujnBZhydJw5cAP6kguS2KvOK_jfPlArhhLIG8wf_cPY"
               alt="Profile"
               width={120}
               height={120}
