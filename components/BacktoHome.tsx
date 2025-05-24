@@ -6,7 +6,7 @@ export default function BacktoHome() {
       <button
         type="button"
         aria-label="Back to Home"
-        className="flex items-center  px-4 py-2 rounded-lg border border-black-500 text-black-600 font-semibold hover:bg-blue-500 hover:text-white transition group"
+        className="flex items-center gap-2 px-4 py-2 rounded-lg border border-black-500 text-black-600 font-semibold hover:bg-black-500 hover:text-black-300 transition group"
       >
         <span
           className="inline-block transform transition-transform group-hover:-translate-x-1 motion-reduce:transition-none"
