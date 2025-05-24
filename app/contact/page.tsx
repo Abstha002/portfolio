@@ -9,7 +9,7 @@ export default function Contact() {
         <h1 className="text-2xl font-bold mb-4 text-black">Contact</h1>
             </div>
         <form 
-          action="https://formsubmit.co/abhayshrestha19@gmail.com" 
+          action="https://formsubmit.co/15bb1f49e820a11fac7a407e7d723db7" 
           method="POST"
           className="flex flex-col gap-4 text-black border-black p-6 rounded-lg bg-white shadow-md"
         >
