@@ -6,12 +6,12 @@ export default function Contact() {
       <section className="bg-white/80 rounded-xl shadow-xl p-10 w-full max-w-3xl">
             <div className="grid grid-cols-2 items-center gap-1">
               <BacktoHome/>
-        <h1 className="text-2xl font-bold mb-4 text-black-800">Contact</h1>
+        <h1 className="text-2xl font-bold mb-4 text-black">Contact</h1>
             </div>
         <form 
           action="https://formsubmit.co/abhayshrestha19@gmail.com" 
           method="POST"
-          className="flex flex-col gap-4"
+          className="flex flex-col gap-4 text-black border-black p-6 rounded-lg bg-white shadow-md"
         >
           <input type="text" name="name" placeholder="Your Name" required className="p-2 rounded border" />
           <input type="email" name="email" placeholder="Your Email" required className="p-2 rounded border" />
