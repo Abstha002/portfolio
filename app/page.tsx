@@ -56,7 +56,7 @@ export default function Home() {
           <div className="flex justify-center">
             <Image
               src="https://media.licdn.com/dms/image/v2/D4D03AQGNlz6jre0lng/profile-displayphoto-shrink_200_200/B4DZbkFy82HQAg-/0/1747583447887?e=2147483647&v=beta&t=ujnBZhydJw5cAP6kguS2KvOK_jfPlArhhLIG8wf_cPY"
-              alt="Profile"
+              alt="Abhay Raj Shrestha Profile"
               width={120}
               height={120}
               className="rounded-full border-4 border-blue-400 shadow-lg object-cover"
