@@ -10,7 +10,7 @@ export default function Home() {
           <div className="md:col-span-2 flex flex-col gap-4">
             <h1 className="text-3xl font-bold text-gray-800">Abhay Raj Shrestha</h1>
             <h2 className="text-xl text-gray-600 mb-4">Web Developer</h2>
-            <nav className="flex gap-3">
+            <nav className="flex gap-3 overflow-x-auto w-full">
               <Link href='/'>
                 <button className="px-4 py-2 rounded-lg border border-blue-500 text-blue-600 font-semibold hover:bg-blue-500 hover:text-white transition">Home</button>
               </Link>
