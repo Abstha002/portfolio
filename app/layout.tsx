@@ -1,46 +1,49 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { DM_Serif_Display, DM_Mono } from "next/font/google";
+import Script from "next/script";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { defaultMetadata, personJsonLd } from "@/lib/metadata";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
+  weight: ["400"],
+  style: ["normal", "italic"],
+  variable: "--font-serif",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const dmMono = DM_Mono({
   subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
+  display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Abhay Raj Shrestha - Portfolio",
-  description: "This is my personal website.",
-};
+export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Abhay Raj Shrestha",
-          "url": "https://www.abhayrajshrestha.com.np/",
-          "sameAs": [
-            "https://www.linkedin.com/in/abhayshrestha/",
-            "https://github.com/Abstha002"
-          ],
-          "jobTitle": "Web Developer",
-          "alumniOf": "Himalaya College of Engineering"
-        }) }} />
-
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html
+      lang="en"
+      className={`${dmSerif.variable} ${dmMono.variable} scroll-smooth`}
+    >
+      <head>
+        <Script
+          id="person-jsonld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+      </head>
+      <body className="bg-white font-sans text-stone-900 antialiased">
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );
