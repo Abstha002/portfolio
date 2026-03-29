@@ -4,54 +4,67 @@
   :root {
     --font-serif: "DM Serif Display", Georgia, serif;
     --font-mono: "DM Mono", "Fira Code", monospace;
+ 
+    /* Light mode — warm off-white, not pure white */
+    --bg-base:        #F7F6F3;
+    --bg-surface:     #EFEDE8;
+    --bg-raised:      #FFFFFF;
+    --border-subtle:  #E4E1DB;
+    --border-mid:     #C9C5BC;
+    --text-primary:   #1A1916;
+    --text-secondary: #6B6860;
+    --text-muted:     #9C9890;
   }
-
-  /* Make serif and mono fonts available as Tailwind utilities */
-  .font-serif {
-    font-family: var(--font-serif);
+ 
+  .dark {
+    --bg-base:        #111110;
+    --bg-surface:     #1A1916;
+    --bg-raised:      #222220;
+    --border-subtle:  #2C2C28;
+    --border-mid:     #3D3D38;
+    --text-primary:   #F0EEE9;
+    --text-secondary: #9C9890;
+    --text-muted:     #5C5C58;
   }
-
-  .font-mono {
-    font-family: var(--font-mono);
-  }
-
-  /* Smooth scrolling */
+ 
   html {
     scroll-behavior: smooth;
+    background-color: var(--bg-base);
   }
-
-  /* Better text rendering */
+ 
   body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
-
-  /* Focus styles for accessibility */
+ 
   :focus-visible {
-    outline: 2px solid #1c1917;
+    outline: 2px solid var(--text-primary);
     outline-offset: 2px;
     border-radius: 4px;
   }
-
-  /* Selection color */
+ 
   ::selection {
-    background-color: #1c1917;
-    color: #fafaf9;
+    background-color: var(--text-primary);
+    color: var(--bg-base);
   }
 }
-
+ 
 @layer utilities {
-  /* Animate ping for the status dot */
   @keyframes ping {
-    75%,
-    100% {
-      transform: scale(2);
-      opacity: 0;
-    }
+    75%, 100% { transform: scale(2); opacity: 0; }
   }
-
   .animate-ping {
     animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+ 
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  .animate-spin {
+    animation: spin 0.8s linear infinite;
   }
 }
