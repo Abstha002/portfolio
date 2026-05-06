@@ -33,6 +33,8 @@ export const skillGroups: SkillGroup[] = [
       { name: "Stored Procedures" },
       { name: "UDFs" },
       { name: "Triggers" },
+      { name: "Entity Framework" },
+      { name: "Views" },
     ],
   },
   {
@@ -44,7 +46,7 @@ export const skillGroups: SkillGroup[] = [
       { name: "Crystal Reports" },
       { name: "REST APIs" },
       { name: "SOAP APIs" },
-      { name: "Agile" },
+      { name: "Agile Development" },
     ],
   },
 ];

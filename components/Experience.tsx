@@ -33,7 +33,11 @@ export default function Experience() {
                         : { border: "1px solid var(--border-mid)", color: "var(--text-secondary)" }
                     }
                   >
-                    {job.type === "full-time" ? "Full-time" : "Internship"}
+                    {job.type === "full-time"? "Full-time"
+                      : job.type === "intern" ? "Internship"
+                      : job.type === "trainee" ? "Trainee"
+                      : "Other"
+                    }
                   </span>
                 </div>
                 {/* Card */}
